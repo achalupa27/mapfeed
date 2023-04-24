@@ -31,4 +31,5 @@ const DarkModeButtonIcon = () => {
     );
 };
 
+DarkModeButtonIcon.displayName = 'DarkModeButtonIcon';
 export default DarkModeButtonIcon;

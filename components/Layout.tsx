@@ -2,7 +2,6 @@ import Footer from './Footer';
 import Header from './Header';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { COMPANY_NAME } from '../constants';
 
 function Layout({ children }: any) {
     const router = useRouter();
@@ -10,7 +9,7 @@ function Layout({ children }: any) {
         return (
             <div className='bg-secondary text-primary dark:bg-secondary-dark dark:text-primary-dark'>
                 <Head>
-                    <title>{COMPANY_NAME} - Global Financial Markets</title>
+                    <title>Mapfeed - Global Financial Markets</title>
                 </Head>
                 <Header />
                 <main>{children}</main>
@@ -21,11 +20,12 @@ function Layout({ children }: any) {
         return (
             <main>
                 <Head>
-                    <title>{COMPANY_NAME} - Global View</title>
+                    <title>Mapfeed - Global View</title>
                 </Head>
                 {children}
             </main>
         );
 }
 
+Layout.displayName = 'Layout';
 export default Layout;

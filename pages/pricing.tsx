@@ -71,8 +71,8 @@ function Pricing() {
                         <div className='text-sm'>No Credit Card required.</div>
                     </div>
                     <div className='grow'>
-                        {freeFeatures.map((feature) => (
-                            <div className='flex items-center gap-3 px-2 text-sm leading-8'>
+                        {freeFeatures.map((feature, i) => (
+                            <div key={i} className='flex items-center gap-3 px-2 text-sm leading-8'>
                                 <i className='fi fi-rr-check'></i> <div>{feature.feature}</div>
                             </div>
                         ))}
@@ -94,8 +94,8 @@ function Pricing() {
                         <div className='text-sm'>{term === 'Monthly' ? '$29.95' : '$23.96'} USD per month</div>
                     </div>
                     <div className='grow'>
-                        {basicFeatures.map((feature) => (
-                            <div className='flex items-center gap-3 px-2 text-sm leading-8'>
+                        {basicFeatures.map((feature, i) => (
+                            <div key={i} className='flex items-center gap-3 px-2 text-sm leading-8'>
                                 <i className='fi fi-rr-check'></i> <div>{feature.feature}</div>
                             </div>
                         ))}
@@ -119,8 +119,8 @@ function Pricing() {
                         <div className='text-sm'>{term === 'Monthly' ? '$39.95' : '$31.96'} USD per month</div>
                     </div>
                     <div className='grow'>
-                        {professionalFeatures.map((feature) => (
-                            <div className='flex items-center gap-3 px-2 text-sm leading-8'>
+                        {professionalFeatures.map((feature, i) => (
+                            <div key={i} className='flex items-center gap-3 px-2 text-sm leading-8'>
                                 <i className='fi fi-rr-check'></i> <div>{feature.feature}</div>
                             </div>
                         ))}

@@ -20,4 +20,5 @@ function Feature({ img, name, description, comingSoon }: Props) {
     );
 }
 
+Feature.displayName = 'Feature';
 export default Feature;

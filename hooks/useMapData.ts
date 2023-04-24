@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { feature, mesh } from 'topojson';
 
-import topology from '../data/countries-50m.json';
+import topology from '../data/countries-110m.json';
 
 export const useMapData = () => {
     const [data, setData] = useState(null);

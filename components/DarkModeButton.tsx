@@ -32,4 +32,5 @@ function DarkModeButton({ icon }: { icon?: string }) {
     );
 }
 
+DarkModeButton.displayName = 'DarkModeButton';
 export default DarkModeButton;

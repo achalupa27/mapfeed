@@ -31,4 +31,5 @@ const HeaderMenu = () => {
     );
 };
 
+HeaderMenu.displayName = 'HeaderMenu';
 export default HeaderMenu;

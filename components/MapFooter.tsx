@@ -1,4 +1,4 @@
-const Footer = ({ selectedCountry, data }: any) => {
+const MapFooter = ({ selectedCountry, data }: any) => {
     return (
         <div className='absolute bottom-0 z-10 m-2 flex h-auto w-[calc(100%-16px)] space-x-24 border bg-[#1a2b41]/90 px-4 py-2 text-white'>
             <div className='flex flex-col'>
@@ -38,4 +38,5 @@ const Footer = ({ selectedCountry, data }: any) => {
     );
 };
 
-export default Footer;
+MapFooter.displayName = 'MapFooter';
+export default MapFooter;

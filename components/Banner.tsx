@@ -21,7 +21,7 @@ function Banner() {
             <div className='h-1/2 md:ml-16 md:mt-16 md:h-auto'>
                 <div className='text-4xl font-semibold'>Global Financial Markets.</div>
                 <div className='text-2xl'>All in one place.</div>
-                <div className='my-8 text-lg'>Lorem ispum dolor sit amet.</div>
+                <div className='my-8 text-lg'></div>
                 <div className='flex flex-col space-y-2 lg:flex-row lg:space-x-3 lg:space-y-0'>
                     {user ? (
                         <Link href='/map' className='button-primary hover:scale-105 active:scale-90 lg:w-1/2'>
@@ -48,4 +48,5 @@ function Banner() {
     );
 }
 
+Banner.displayName = 'Banner';
 export default Banner;
