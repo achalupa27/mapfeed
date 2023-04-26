@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import Name from '../data/country-by-name.json';
 import Capital from '../data/country-by-capital-city.json';
 import Abbreviation from '../data/country-by-abbreviation.json';
@@ -9,6 +7,7 @@ import CurrencyCode from '../data/country-by-currency-code.json';
 import CurrencyName from '../data/country-by-currency-name.json';
 import Domain from '../data/country-by-domain-tld.json';
 import Elevation from '../data/country-by-elevation.json';
+import Flag from '../data/country-by-flag.json';
 import GovType from '../data/country-by-government-type.json';
 import IndepDate from '../data/country-by-independence-date.json';
 import Landlocked from '../data/country-by-landlocked.json';
@@ -40,6 +39,7 @@ export const useCountryData = () => {
         if (dataset === CurrencyName) return 'currency_name';
         if (dataset === Domain) return 'tld';
         if (dataset === Elevation) return 'elevation';
+        if (dataset === Flag) return 'flag_base64';
         if (dataset === GovType) return 'government';
         if (dataset === IndepDate) return 'independence';
         if (dataset === Landlocked) return 'landlocked';
@@ -65,8 +65,8 @@ export const useCountryData = () => {
         }
     }
 
-    const datasetStats = ['Capital', 'Abbreviation', 'Average Male Height', 'Continent', 'Currency Code', 'Currency Name', 'Domain', 'Elevation', 'Government Type', 'Independence Date', 'Landlocked', 'Languages', 'LifeExpectancy', 'NationalDish', 'PopulationDensity', 'Population', 'Region', 'Religion', 'Surface Area', 'Yearly Average Temperature'];
-    const datasetArray = [Capital, Abbreviation, AvgMaleHeight, Continent, CurrencyCode, CurrencyName, Domain, Elevation, GovType, IndepDate, Landlocked, Languages, LifeExpectancy, NationalDish, PopulationDensity, Population, Region, Religion, SurfaceArea, YearlyAvgTemp];
+    const datasetStats = ['Capital', 'Abbreviation', 'Average Male Height', 'Continent', 'Currency Code', 'Currency Name', 'Domain', 'Elevation', 'Flag', 'Government Type', 'Independence Date', 'Landlocked', 'Languages', 'LifeExpectancy', 'NationalDish', 'PopulationDensity', 'Population', 'Region', 'Religion', 'Surface Area', 'Yearly Average Temperature'];
+    const datasetArray = [Capital, Abbreviation, AvgMaleHeight, Continent, CurrencyCode, CurrencyName, Domain, Elevation, Flag, GovType, IndepDate, Landlocked, Languages, LifeExpectancy, NationalDish, PopulationDensity, Population, Region, Religion, SurfaceArea, YearlyAvgTemp];
 
     for (let [key, value] of countryData) {
         for (let i = 0; i < datasetArray.length; i++) {

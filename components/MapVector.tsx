@@ -47,7 +47,7 @@ const MapVector: React.FC<MapProps> = React.memo(({ data: { countries, interiors
         else if (indexChange >= 0.5 && indexChange < 1.5) return 'fill-green-300';
         else if (indexChange >= 1.5 && indexChange < 2.5) return 'fill-green-500';
         else if (indexChange >= 2.5) return 'fill-green-700';
-        else if (indexChange < 0.1 && indexChange > -0.1) return 'fill-zinc-400';
+        else if (indexChange < 0.1 && indexChange > -0.1) return 'fill-white';
         else if (indexChange < -0.1 && indexChange > -0.5) return 'fill-red-100';
         else if (indexChange <= -0.5 && indexChange > -1.5) return 'fill-red-300';
         else if (indexChange <= -1.5 && indexChange > -2.5) return 'fill-red-500';
@@ -65,7 +65,7 @@ const MapVector: React.FC<MapProps> = React.memo(({ data: { countries, interiors
             {countries.features.map((feature: any) => (
                 <path
                     key={feature.geometry.coordinates[0]}
-                    className={`${getCountryClass(feature.properties.name)} hover:fill-white`}
+                    className={`${getCountryClass(feature.properties.name)} hover:opacity-70`}
                     d={path(feature) || ''}
                     onClick={() => {
                         onCountryClick(feature.properties.name);

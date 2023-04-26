@@ -15,16 +15,10 @@ const HeaderMenu = () => {
             <Link href='/pricing' className='basic-button'>
                 <span>Pricing</span>
             </Link>
-            <Link href='/learn'>
-                <div className='basic-button'>
-                    <i className='fi fi-rr-check'></i>
-                    <span>Call to Action</span>
-                </div>
-            </Link>
-            <Link href={`${user ? '/app' : '/login'}`}>
-                <div className='button-secondary mt-1 py-1'>
+            <Link href={`${user ? '/map' : '/login'}`}>
+                <div className='button-primary mt-1 py-1'>
                     {user ? <i className='fi fi-rr-arrow-up-right -ml-[2px] mt-[2px] pr-1 text-xs'></i> : null}
-                    {user ? 'Journal' : 'Sign In'}
+                    {user ? 'Map' : 'Sign In'}
                 </div>
             </Link>
         </div>
