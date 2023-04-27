@@ -21,7 +21,7 @@ const MapVector: React.FC<MapProps> = React.memo(({ data: { countries, interiors
 
     useEffect(() => {
         zoomBehavior = zoom()
-            .scaleExtent([0.75, 2]) // set the minimum and maximum scale factor
+            .scaleExtent([0.75, 2])
             .translateExtent([
                 [0, 0],
                 [window.innerWidth, window.innerHeight],

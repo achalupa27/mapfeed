@@ -4,6 +4,8 @@ import { useMapData } from '../hooks/useMapData';
 import { useCountryData } from '../hooks/useCountryData';
 import { google } from 'googleapis';
 import LeftCard from '../components/LeftCard';
+import { TickerTape } from 'react-ts-tradingview-widgets';
+import tickerTape from '../data/tickerTape';
 
 // async function getInitialData(spreadsheetId: string, range: string) {
 //     const auth = await google.auth.getClient({ scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'] });
@@ -122,6 +124,9 @@ const Map = ({ indexData }: any) => {
                 <svg width='100%' height='100%'>
                     <MapVector data={memoizedMapData} indexData={indexData} onCountryClick={handleCountryClick} />
                 </svg>
+            </div>
+            <div className='absolute -bottom-8 right-0 w-[calc(100%-400px)] bg-secondary/90'>
+                <TickerTape colorTheme='light' isTransparent symbols={tickerTape} />
             </div>
         </div>
     );
