@@ -1,4 +1,4 @@
-import { geoEquirectangular, geoPath, zoom, ZoomBehavior } from 'd3';
+import { geoNaturalEarth1, geoPath, zoom, ZoomBehavior } from 'd3';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
@@ -15,13 +15,13 @@ const MapVector: React.FC<MapProps> = React.memo(({ data: { countries, interiors
     console.log('MapVector being called');
     const [zoomTransform, setZoomTransform] = useState({ k: 1, x: 0, y: 0 });
     const mapRef = useRef<SVGGElement>(null);
-    const projection = useMemo(() => geoEquirectangular().fitSize([window.innerWidth, window.innerHeight], countries), [countries]);
+    const projection = useMemo(() => geoNaturalEarth1().fitSize([window.innerWidth, window.innerHeight], countries), [countries]);
     const path = useMemo(() => geoPath(projection), [projection]);
     let zoomBehavior: ZoomBehavior<Element, unknown> | null = null;
 
     useEffect(() => {
         zoomBehavior = zoom()
-            .scaleExtent([0.75, 2])
+            .scaleExtent([0.75, 3])
             .translateExtent([
                 [0, 0],
                 [window.innerWidth, window.innerHeight],

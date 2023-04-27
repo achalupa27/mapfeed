@@ -14,7 +14,7 @@ interface MarketOverviewTab {
 const MarketData: MarketOverviewTab = {
     'United States': [
         {
-            title: 'Indices',
+            title: 'Overview',
             symbols: [
                 {
                     s: 'FOREXCOM:SPXUSD',
@@ -30,6 +30,78 @@ const MarketData: MarketOverviewTab = {
                 },
             ],
             originalTitle: 'Indices',
+        },
+        {
+            title: 'Sectors',
+            symbols: [
+                {
+                    s: 'AMEX:XLE',
+                    d: 'Energy',
+                },
+                {
+                    s: 'AMEX:XLF',
+                    d: 'Finance',
+                },
+                {
+                    s: 'AMEX:XLB',
+                    d: 'Materials',
+                },
+                {
+                    s: 'AMEX:XLC',
+                    d: 'Communication',
+                },
+                {
+                    s: 'AMEX:XLI',
+                    d: 'Industrial',
+                },
+                {
+                    s: 'AMEX:XLK',
+                    d: 'Technology',
+                },
+                {
+                    s: 'AMEX:XLP',
+                    d: 'Consumer Staples',
+                },
+                {
+                    s: 'AMEX:XLRE',
+                    d: 'Real Estate',
+                },
+                {
+                    s: 'AMEX:XLU',
+                    d: 'Utilities',
+                },
+                {
+                    s: 'AMEX:XLV',
+                    d: 'Health Care',
+                },
+                {
+                    s: 'AMEX:XLY',
+                    d: 'Consumer Discretionary',
+                },
+            ],
+            originalTitle: 'Sectors',
+        },
+        {
+            title: 'Currencies',
+            symbols: [
+                {
+                    s: 'FX:USDCAD',
+                    d: '',
+                },
+                {
+                    s: 'FX:USDCNH',
+                    d: '',
+                },
+                {
+                    s: 'FX_IDC:USDEUR',
+                    d: '',
+                },
+                {
+                    s: 'FX_IDC:USDGBP',
+                    d: '',
+                },
+            ],
+            originalTitle: 'Currencies',
         },
     ],
     Argentina: [

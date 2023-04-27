@@ -44,7 +44,7 @@ const LeftCard = ({ selectedCountry, data }: any) => {
                 <span>{selectedCountry}</span>
             </div>
             <div className='flex h-full flex-col justify-between'>
-                <MarketOverviewNoSSR colorTheme='light' height={400} width={400} isTransparent showChart={false} tabs={MarketData[selectedCountry] as []} />
+                <MarketOverviewNoSSR colorTheme='light' height={500} width={400} isTransparent showChart={false} tabs={MarketData[selectedCountry] as []} />
                 <EconomicCalendar colorTheme='light' height={400} width={400} isTransparent currencyFilter={data?.['Currency Code']} />
             </div>
         </div>
