@@ -7,57 +7,57 @@ import LeftCard from '../components/LeftCard';
 import { TickerTape } from 'react-ts-tradingview-widgets';
 import tickerTape from '../data/tickerTape';
 
-async function getInitialData(spreadsheetId: string, range: string) {
-    const auth = await google.auth.getClient({ scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'] });
-    const sheets = google.sheets({ version: 'v4', auth });
+// async function getInitialData(spreadsheetId: string, range: string) {
+//     const auth = await google.auth.getClient({ scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'] });
+//     const sheets = google.sheets({ version: 'v4', auth });
 
-    const response = await sheets.spreadsheets.values.get({
-        spreadsheetId,
-        range,
-    });
+//     const response = await sheets.spreadsheets.values.get({
+//         spreadsheetId,
+//         range,
+//     });
 
-    return response.data.values;
-}
+//     return response.data.values;
+// }
 
-async function pollSheetData(spreadsheetId: string, range: string, onData: any) {
-    const auth = await google.auth.getClient({ scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'] });
-    const sheets = google.sheets({ version: 'v4', auth });
+// async function pollSheetData(spreadsheetId: string, range: string, onData: any) {
+//     const auth = await google.auth.getClient({ scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'] });
+//     const sheets = google.sheets({ version: 'v4', auth });
 
-    const response = await sheets.spreadsheets.values.batchGet({
-        spreadsheetId,
-        ranges: [range],
-    });
+//     const response = await sheets.spreadsheets.values.batchGet({
+//         spreadsheetId,
+//         ranges: [range],
+//     });
 
-    let data = response?.data?.valueRanges?.[0].values;
+//     let data = response?.data?.valueRanges?.[0].values;
 
-    // Call the onData callback with the initial data
-    onData(data);
+//     // Call the onData callback with the initial data
+//     onData(data);
 
-    const updateInterval = 5000;
+//     const updateInterval = 5000;
 
-    const updateData = async () => {
-        const updatesResponse = await sheets.spreadsheets.values.batchGet({
-            spreadsheetId,
-            ranges: [range],
-        });
+//     const updateData = async () => {
+//         const updatesResponse = await sheets.spreadsheets.values.batchGet({
+//             spreadsheetId,
+//             ranges: [range],
+//         });
 
-        const updates = updatesResponse?.data?.valueRanges?.[0].values;
+//         const updates = updatesResponse?.data?.valueRanges?.[0].values;
 
-        // Filter out any data that hasn't changed
-        const changedData = updates?.filter((update: any, i: number) => {
-            return update !== data?.[i];
-        });
+//         // Filter out any data that hasn't changed
+//         const changedData = updates?.filter((update: any, i: number) => {
+//             return update !== data?.[i];
+//         });
 
-        if (changedData && changedData.length > 0) {
-            console.log('Data updated:', changedData);
-            onData(updates);
-        }
+//         if (changedData && changedData.length > 0) {
+//             console.log('Data updated:', changedData);
+//             onData(updates);
+//         }
 
-        data = updates;
-    };
+//         data = updates;
+//     };
 
-    setInterval(updateData, updateInterval);
-}
+//     setInterval(updateData, updateInterval);
+// }
 
 const Map = ({ indexData }: any) => {
     console.log('initialIndexData: ', indexData);
@@ -134,31 +134,31 @@ const Map = ({ indexData }: any) => {
 
 export async function getServerSideProps(context: any) {
     const range = 'Symbols!A1:B32';
-    const initialData = await getInitialData(process.env.SHEET_ID as string, range);
-    // let initialData: any = [];
-    // return {
-    //     props: {
-    //         initialData,
-    //     },
-    // };
+    // const initialData = await getInitialData(process.env.SHEET_ID as string, range);
+    let initialData: any = [];
+    return {
+        props: {
+            initialData,
+        },
+    };
 
-    return new Promise((resolve, reject) => {
-        // Set up a callback to receive updates
-        const onDataUpdate = (data: any) => {
-            // Update the component with the new data
-            // (you may want to use WebSockets or a similar technology to push the updates to the client instead)
-        };
+    // return new Promise((resolve, reject) => {
+    //     // Set up a callback to receive updates
+    //     const onDataUpdate = (data: any) => {
+    //         // Update the component with the new data
+    //         // (you may want to use WebSockets or a similar technology to push the updates to the client instead)
+    //     };
 
-        // Poll for updates to the sheet
-        pollSheetData(process.env.SHEET_ID as string, range, onDataUpdate);
+    //     // Poll for updates to the sheet
+    //     pollSheetData(process.env.SHEET_ID as string, range, onDataUpdate);
 
-        // Resolve the promise with the initial data
-        resolve({
-            props: {
-                initialData,
-            },
-        });
-    });
+    //     // Resolve the promise with the initial data
+    //     resolve({
+    //         props: {
+    //             initialData,
+    //         },
+    //     });
+    // });
 }
 
 export default Map;

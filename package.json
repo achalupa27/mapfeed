@@ -12,6 +12,7 @@
         "@types/d3": "^7.4.0",
         "@types/d3-geo": "^3.0.3",
         "@types/topojson": "^3.2.3",
+        "@vercel/analytics": "^1.0.2",
         "cheerio": "^1.0.0-rc.12",
         "d3": "^7.8.2",
         "d3-geo": "^3.1.0",

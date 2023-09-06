@@ -25,7 +25,7 @@ function Banner() {
                 <div className='flex flex-col space-y-2 lg:flex-row lg:space-x-3 lg:space-y-0'>
                     {user ? (
                         <Link href='/map' className='button-primary hover:scale-105 active:scale-90 lg:w-1/2'>
-                            <i className='fi fi-rr-arrow-up-right -ml-[3px] mt-[2px] pr-2'></i>
+                            <i className='fi fi-rr-earth-americas -ml-[3px] mt-[2px] pr-2 text-lg leading-none'></i>
                             <span>Open Map</span>
                         </Link>
                     ) : (

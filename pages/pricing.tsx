@@ -53,7 +53,7 @@ function Pricing() {
     return (
         <div className='flex min-h-screen flex-col items-center gap-12 py-8'>
             <h1>Take the next step.</h1>
-            <div className=' flex h-10 w-80 rounded bg-primary p-[2px] text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
+            <div className=' flex h-10 w-96 rounded bg-primary p-[3px] text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
                 <div className={`flex w-1/2 items-center justify-center space-x-2 rounded text-sm font-semibold transition duration-200 ${term == 'Monthly' ? ' bg-secondary text-primary dark:bg-secondary-dark dark:text-primary-dark' : ''}`} onClick={() => handleTerm('Monthly')}>
                     Monthly
                 </div>
@@ -65,7 +65,7 @@ function Pricing() {
                 </div>
             </div>
             <div className='flex flex-wrap justify-center gap-8'>
-                <div className='flex h-[32rem] w-[18rem] flex-col rounded border border-primary p-1 dark:border-secondary'>
+                <div className='flex h-[32rem] w-[20rem] flex-col rounded border border-primary p-1 dark:border-secondary'>
                     <div className='px-2 py-1'>
                         <div className='text-2xl'>Free</div>
                         <div className='text-sm'>No Credit Card required.</div>
@@ -88,7 +88,7 @@ function Pricing() {
                     )}
                 </div>
 
-                <div className='flex h-[32rem] w-[18rem] flex-col rounded bg-primary p-1 text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
+                <div className='flex h-[32rem] w-[20rem] flex-col rounded bg-primary p-1 text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
                     <div className='px-2 py-1'>
                         <div className='text-2xl'>Basic</div>
                         <div className='text-sm'>{term === 'Monthly' ? '$29.95' : '$23.96'} USD per month</div>
@@ -111,7 +111,7 @@ function Pricing() {
                     )}
                 </div>
 
-                <div className='flex h-[32rem] w-[18rem] flex-col rounded bg-primary p-1 text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
+                <div className='flex h-[32rem] w-[20rem] flex-col rounded bg-primary p-1 text-secondary dark:bg-primary-dark dark:text-secondary-dark'>
                     <div className='px-2 py-1'>
                         <div className='text-2xl'>
                             <strong>Professional</strong>

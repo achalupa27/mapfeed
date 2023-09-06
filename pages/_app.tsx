@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Router from 'next/router';
 import ProgressBar from '@badrap/bar-of-progress';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from '@vercel/analytics/react';
 
 const progress = new ProgressBar({
     size: 4,
@@ -22,6 +23,7 @@ function App({ Component, pageProps }: AppProps) {
         <ThemeProvider enableSystem={false} attribute='class'>
             <Layout>
                 <Component {...pageProps} />
+                <Analytics />
             </Layout>
         </ThemeProvider>
     );

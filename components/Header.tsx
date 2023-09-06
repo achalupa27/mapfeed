@@ -46,7 +46,7 @@ function Header() {
                 </div>
                 <Link href={`${user ? '/map' : '/login'}`}>
                     <div className='button-secondary py-1'>
-                        {user ? <i className='fi fi-rr-arrow-up-right -ml-[2px] mt-[2px] pr-1 text-xs'></i> : null}
+                        {user ? <i className='fi fi-rr-earth-americas -ml-[2px] mt-[2px] pr-2'></i> : null}
                         {user ? 'Map' : 'Sign In'}
                     </div>
                 </Link>
