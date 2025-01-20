@@ -1,7 +1,7 @@
 import Footer from './Footer';
-import Header from './Header';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Header from './website/layout/header/header';
 
 function Layout({ children }: any) {
     const router = useRouter();
