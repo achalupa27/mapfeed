@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
-import MapVector from '../components/MapVector';
+import MapVector from '../components/map-vector';
 import { useMapData } from '../hooks/useMapData';
 import { useCountryData } from '../hooks/useCountryData';
 import { google } from 'googleapis';
-import LeftCard from '../components/LeftCard';
+import LeftCard from '../components/left-card';
 import { TickerTape } from 'react-ts-tradingview-widgets';
 import tickerTape from '../data/tickerTape';
 
@@ -95,7 +95,7 @@ const Map = ({ indexData }: any) => {
         ['Spain', '0.19'],
         ['Sweden', '1.41'],
         ['Taiwan', '-0.22'],
-        ['Thailand', '#N/A'],
+        ['Thailand', '0.34'],
         ['Turkey', '-0.22'],
         ['United Arab Emirates', '0.76'],
         ['United Kingdom', '-0.04'],

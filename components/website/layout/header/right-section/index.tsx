@@ -32,12 +32,14 @@ const RightSection = () => {
                     </Button>
                 </Link>
             ) : (
-                <Button variant='secondary' onClick={undefined} className='hidden lg:flex'>
+                <Button variant='secondary' size='lg' onClick={undefined} className='hidden lg:flex'>
                     Log in
                 </Button>
             )}
-            <Link href={`${session ? '/app' : '/register'}`}>
-                <Button className='hidden lg:flex'>{session ? 'Dashboard' : 'Sign Up'}</Button>
+            <Link href={`${session ? '/dashboard' : '/register'}`}>
+                <Button size='lg' className='hidden lg:flex'>
+                    {session ? 'Map' : 'Sign Up'}
+                </Button>
             </Link>
             <MobileMenu />
         </div>

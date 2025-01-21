@@ -13,7 +13,7 @@ const CompanyLogo = ({ showName = true, textColor }: CompanyLogoProps) => {
     return (
         <Link href='/' className='flex w-fit items-center space-x-2 hover:cursor-pointer'>
             <Logo />
-            {showName && <span className={`text-3xl font-normal ${textColor || 'text-stone-950 dark:text-stone-50'}`}>{COMPANY_NAME}</span>}
+            {showName && <span className={`text-3xl font-normal ${textColor || 'text-slate-950 dark:text-slate-50'}`}>{COMPANY_NAME}</span>}
         </Link>
     );
 };

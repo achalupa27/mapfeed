@@ -1,11 +1,11 @@
-import Footer from './Footer';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from './website/layout/header/header';
+import Footer from './website/layout/footer/footer';
 
 function Layout({ children }: any) {
     const router = useRouter();
-    if (router.pathname != '/map') {
+    if (router.pathname != '/dashboard') {
         return (
             <div className='min-h-screen bg-secondary text-primary dark:bg-secondary-dark dark:text-primary-dark'>
                 <Head>

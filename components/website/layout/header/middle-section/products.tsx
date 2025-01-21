@@ -8,7 +8,7 @@ const Products = () => {
         <div className='flex'>
             {Object.keys(products).map((category) => (
                 <div key={category} className='group relative'>
-                    <Link href={`/${category}`} className='flex h-8 cursor-pointer items-center justify-between space-x-2 rounded px-4 transition duration-200 group-hover:bg-stone-300 hover:bg-stone-300 dark:group-hover:bg-stone-700 hover:dark:bg-stone-700'>
+                    <Link href={`/${category}`} className='flex h-8 cursor-pointer items-center justify-between space-x-2 rounded px-4 transition duration-200 hover:bg-slate-300 group-hover:bg-slate-300 hover:dark:bg-slate-700 dark:group-hover:bg-slate-700'>
                         <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
                         <i className='fi fi-rr-angle-small-down' />
                     </Link>

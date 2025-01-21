@@ -1,4 +1,4 @@
-import Feature from '../components/Feature';
+import Feature from '@/components/Feature';
 import features from '../data/features.json';
 
 const Features = () => {

@@ -12,6 +12,15 @@ export const YEARLY_BASIC_PRICE = '14.95';
 export const MONTHLY_PROFESSIONAL_PRICE = '29.95';
 export const YEARLY_PROFESSIONAL_PRICE = '23.95';
 
+export const X_LINK = 'a';
+export const INSTAGRAM_LINK = 'a';
+export const YOUTUBE_LINK = 'a';
+export const TIKTOK_LINK = 'a';
+export const FACEBOOK_LINK = 'a';
+export const REDDIT_LINK = 'a';
+export const LINKEDIN_LINK = 'a';
+export const DISCORD_LINK = 's';
+
 export const companyPages = [
     { page: 'About', link: '/about' },
     { page: 'Pricing', link: '/pricing' },
